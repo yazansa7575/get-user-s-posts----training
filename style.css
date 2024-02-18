@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: cursive;
+}
+
+.container{
+    background: radial-gradient(circle at 30% 107%, #c8bb2e 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.leftDive{
+    width: 36%;
+    padding: 4%;
+}
+.leftDive ul {
+    list-style: none;
+    width: 100%;
+    height: max-content;
+}
+.leftDive li {
+    background-color: white;
+    height: max-content;
+    margin: 4%;
+    border-radius:50px;
+    width: 100%;
+    padding-bottom: 2%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    border: 1px solid transparent;
+    transition: all .2s;
+    cursor: pointer;
+}
+.leftDive li:hover {
+    background-color: rgba(255, 255, 255, 0.787);
+    border: 1px solid #fd5949 ;
+    transform: rotate3d(0, 0, -1, 2deg) scale(1.05);
+}
+.leftDive li h2,p{
+    margin-left: 5%;
+}
+.leftDive li h2{
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.leftDive li p{
+    font-weight: 300;
+}
+.rightDive{
+    width: 64%;
+    display: flex;
+    height: max-content;
+    margin-top: 5%;
+    justify-content: center;
+    
+}
+.rightDive .posts{
+    overflow: scroll;
+    height:775px;
+    background-color: rgba(255, 255, 255, 0.51);
+    padding: 3%;
+    width: 80%;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)
+}
+.rightDive .posts .post{
+    background-color: rgba(255, 255, 255, 0.389);
+    margin: 3%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    padding: 3%;
+    transition: all .2s;
+    border-radius: 5px;
+}
+.rightDive .posts .post:hover{
+    background-color: rgba(255, 255, 255, 0.522);
+    transform: scale(1.03);
+}
+.con-title{
+    position: relative;
+}
+.rightDive .posts .post .con-title .title {
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.rightDive .posts .post .con-title .title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle at 30% 107%,#fd5949 45%,#d6249f 60%,#285AEB 90%);
+    width: 0%;
+    height: 2px;
+    transition: all .5s;
+}
+.rightDive .posts .post:hover .title::after{
+    width: 100%;
+}
+/* scroll setting */
+
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: radial-gradient(circle at 30% 107%,#fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgba(222, 212, 212, 0.574);
+border-radius: 20px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgba(222, 212, 212, 0.822);
+}
+/* corner */
+::-webkit-scrollbar-corner{
+opacity: 0;
+}
